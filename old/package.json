@@ -1,0 +1,24 @@
+{
+  "name": "cainwatson.github.io",
+  "version": "1.0.0",
+  "description": "my website",
+  "main": "index.html",
+  "dependencies": {
+    "es6": "^0.0.7",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cainwatson/cainwatson.github.io.git"
+  },
+  "author": "cain watson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cainwatson/cainwatson.github.io/issues"
+  },
+  "homepage": "https://github.com/cainwatson/cainwatson.github.io#readme"
+}
