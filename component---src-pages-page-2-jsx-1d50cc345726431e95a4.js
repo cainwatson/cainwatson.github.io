@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{caWp:function(e,t,o){"use strict";o.r(t);o("q1tI");var c=o("Wbzz"),n=o("L6Je"),a=o("hYuR"),p=o("qKvR");t.default=function(){return Object(p.d)(n.a,null,Object(p.d)(a.a,{title:"Page two"}),Object(p.d)("h1",null,"Hi from the second page"),Object(p.d)("p",null,"Welcome to page 2"),Object(p.d)(c.Link,{to:"/"},"Go back to the homepage"))}}}]);
-//# sourceMappingURL=component---src-pages-page-2-jsx-1d50cc345726431e95a4.js.map
