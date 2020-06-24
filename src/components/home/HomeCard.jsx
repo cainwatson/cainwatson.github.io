@@ -8,6 +8,7 @@ const Container = styled.section`
   border: 4px solid ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.backgroundPrimary};
   text-align: center;
+  border-radius: 16px;
 `
 
 const HomeCard = () => (
