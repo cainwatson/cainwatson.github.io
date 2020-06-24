@@ -6,7 +6,7 @@ const globalStyles = css`
     font-family: 'Lexend Deca', sans-serif;
     font-size: 18px;
     color: ${props => props.theme.colors.primary};
-    background-color: ${props => props.theme.colors.backgroundPrimary};
+    background-color: ${props => props.theme.colors.lightPink};
   }
 
   h1,
@@ -14,7 +14,8 @@ const globalStyles = css`
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  button {
     font-family: 'Poppins', sans-serif;
   }
 
