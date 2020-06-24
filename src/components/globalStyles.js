@@ -6,6 +6,7 @@ const globalStyles = css`
     font-family: 'Lexend Deca', sans-serif;
     font-size: 18px;
     color: ${props => props.theme.colors.primary};
+    background-color: ${props => props.theme.colors.backgroundPrimary};
   }
 
   h1,

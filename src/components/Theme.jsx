@@ -8,6 +8,7 @@ const theme = {
     secondary: '#CC28A3',
     blue: '#654AA3',
     pink: '#C789D6',
+    backgroundPrimary: '#FCEFF9',
   },
   fontSize: {},
 }

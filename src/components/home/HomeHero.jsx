@@ -13,7 +13,7 @@ const Background = styled(BackgroundImage)`
   z-index: -1;
 `
 
-const Container = styled.div`
+const ContentContainer = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -24,9 +24,9 @@ const Container = styled.div`
 const HomeHero = () => (
   <>
     <Background />
-    <Container>
+    <ContentContainer>
       <HomeCard />
-    </Container>
+    </ContentContainer>
   </>
 )
 

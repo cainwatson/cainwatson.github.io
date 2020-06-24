@@ -6,6 +6,7 @@ const Container = styled.section`
   height: min-content;
   padding: 36px;
   border: 4px solid ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.backgroundPrimary};
   text-align: center;
 `
 
