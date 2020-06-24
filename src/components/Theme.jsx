@@ -9,10 +9,6 @@ const theme = {
     blue: '#654AA3',
     pink: '#C789D6',
   },
-  fontFamily: {
-    header: '',
-    text: '',
-  },
   fontSize: {},
 }
 
