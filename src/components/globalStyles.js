@@ -4,6 +4,7 @@ const globalStyles = css`
   body {
     margin: 0;
     font-family: 'Lexend Deca', sans-serif;
+    font-size: 18px;
     color: ${props => props.theme.colors.primary};
   }
 
@@ -14,6 +15,16 @@ const globalStyles = css`
   h5,
   h6 {
     font-family: 'Poppins', sans-serif;
+  }
+
+  h1 {
+    font-size: 2.13rem;
+    margin: 14px 0;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin: 10px 0;
   }
 `
 
