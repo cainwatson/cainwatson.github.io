@@ -1,14 +1,59 @@
 import React from 'react'
+import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from '@emotion/styled'
 
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import Layout from '@components/Layout'
+import SEO from '@components/SEO'
 
-const NotFoundPage = () => (
+const Container = styled.section`
+  width: 100%;
+  height: 100vh;
+  margin: 0 -22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > div {
+    margin: 0 10px;
+    max-height: 600px;
+  }
+`
+
+const CatImage = styled(Img)`
+  width: 460px;
+  border-radius: 8px;
+`
+
+const NotFoundPage = ({ data }) => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <SEO title="404" />
+    <Container>
+      <CatImage
+        fluid={data.catImage.childImageSharp.fluid}
+        alt="Confused brown tabby cat wearing shower cap."
+      />
+      <div>
+        <h1>Uh oh.</h1>
+        <p>I couldn't find that page.</p>
+        <p>
+          <Link to="/">Home</Link>
+        </p>
+      </div>
+    </Container>
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    catImage: file(relativePath: { eq: "404-cat.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 460) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default NotFoundPage
