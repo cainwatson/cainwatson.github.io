@@ -9,14 +9,25 @@ import SEO from '@components/SEO'
 const Container = styled.section`
   width: 100%;
   height: 100vh;
-  margin: 0 -22px;
+  padding: 10px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 
   > div {
     margin: 0 10px;
-    max-height: 600px;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 -22px;
+    padding: 8px;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    > div {
+      margin: 22px;
+      max-height: 600px;
+    }
   }
 `
 
