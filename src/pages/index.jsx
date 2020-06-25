@@ -28,7 +28,7 @@ const HomePage = () => (
             linkLive: 'https://cainwatson.com/drawit',
             images: [
               {
-                src: 'https://via.placeholder.com/600',
+                src: 'https://via.placeholder.com/700',
                 description: 'Lorem ipsum dolor sit amet.',
               },
             ],

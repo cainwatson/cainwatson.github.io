@@ -2,31 +2,41 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
-import { Button, LinkButton } from '@components/Button'
+import { LinkButton } from '@components/Button'
 
 const Container = styled.article`
-  margin: -12px -12px;
-  padding: 18px;
+  max-width: 1200px;
+  padding: 34px;
   border: 8px solid ${props => props.theme.colors.primary};
   border-radius: 16px;
   display: flex;
   flex-wrap: wrap-reverse;
 
   @media (min-width: 1024px) {
-    padding: 34px;
+    height: 480px;
+    margin: -22px;
+    padding: 8px;
     flex-wrap: nowrap;
-  }
 
-  > div {
-    margin: 12px 12px;
+    > div {
+      margin: 22px;
+    }
   }
 `
 
 const Info = styled.div`
-  max-width: 600px;
+  max-width: 420px;
 `
 const Showcase = styled.div`
-  flex: 1;
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 1024px) {
+    flex: 1;
+  }
 `
 
 const Buttons = styled.div`
