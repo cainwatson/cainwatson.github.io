@@ -14,7 +14,6 @@ const Container = styled.article`
 
   @media (min-width: 1024px) {
     height: 480px;
-    margin: -22px;
     padding: 8px;
     flex-wrap: nowrap;
 

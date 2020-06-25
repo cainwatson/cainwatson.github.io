@@ -9,8 +9,6 @@ const Container = styled.section``
 const List = styled.ul`
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
   list-style-type: none;
 `
 
