@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
+import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 
-const Button = styled.button`
+const buttonStyles = props => css`
   border: unset;
   padding: 8px 16px;
-  color: ${props => props.theme.colors.lightPink};
-  background-color: ${props => props.theme.colors[props.variant]};
+  color: ${props.theme.colors.lightPink};
+  background-color: ${props.theme.colors[props.variant]};
   font-size: 20px;
   border-radius: 6px;
 
@@ -14,12 +15,32 @@ const Button = styled.button`
   }
 `
 
-Button.propTypes = {
+export const Button = styled.button`
+  ${buttonStyles}
+`
+
+export const LinkButton = styled.a`
+  ${buttonStyles}
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+
+  :hover {
+    text-decoration: underline;
+  }
+`
+
+const propTypes = {
   variant: PropTypes.oneOf(['primary', 'secondary']),
 }
 
-Button.defaultProps = {
+const defaultProps = {
   variant: 'primary',
 }
+
+Button.propTypes = propTypes
+LinkButton.propTypes = propTypes
+
+Button.defaultProps = defaultProps
+LinkButton.defaultProps = defaultProps
 
 export default Button
