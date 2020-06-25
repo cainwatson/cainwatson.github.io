@@ -2,22 +2,40 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
-import Button from '@components/Button'
+import { Button, LinkButton } from '@components/Button'
 
 const Container = styled.article`
-  padding: 46px;
+  margin: -12px -12px;
+  padding: 18px;
   border: 8px solid ${props => props.theme.colors.primary};
+  border-radius: 16px;
   display: flex;
-  /* margin: -12px -12px; */
+  flex-wrap: wrap-reverse;
+
+  @media (min-width: 1024px) {
+    padding: 34px;
+    flex-wrap: nowrap;
+  }
+
+  > div {
+    margin: 12px 12px;
+  }
 `
 
-const Info = styled.div``
-const Showcase = styled.div``
+const Info = styled.div`
+  max-width: 600px;
+`
+const Showcase = styled.div`
+  flex: 1;
+`
 
 const Buttons = styled.div`
   margin: -6px -6px;
-  button {
+  border-radius: 16px;
+
+  a {
     margin: 6px 6px;
+    display: inline-block;
   }
 `
 
@@ -29,8 +47,20 @@ const CaseStudy = ({ caseStudy }) => (
         <p key={index}>{paragraph}</p>
       ))}
       <Buttons>
-        {caseStudy.linkSourceCode && <Button>Source Code</Button>}
-        {caseStudy.linkLive && <Button variant="secondary">Visit</Button>}
+        {caseStudy.linkSourceCode && (
+          <LinkButton href={caseStudy.linkSourceCode} target="_blank">
+            Source Code
+          </LinkButton>
+        )}
+        {caseStudy.linkLive && (
+          <LinkButton
+            href={caseStudy.linkLive}
+            target="_blank"
+            variant="secondary"
+          >
+            Visit
+          </LinkButton>
+        )}
       </Buttons>
     </Info>
     <Showcase>
