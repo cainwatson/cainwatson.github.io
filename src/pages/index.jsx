@@ -7,7 +7,10 @@ import HomeHero from '@components/home/HomeHero'
 import CaseStudyList from '@components/home/CaseStudyList'
 
 const Content = styled.div`
-  padding: 80px;
+  padding: 36px;
+  @media (min-width: 1024px) {
+    padding: 80px;
+  }
 `
 
 const HomePage = () => (
