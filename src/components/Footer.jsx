@@ -2,11 +2,14 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const Container = styled.footer`
-  width: 100%;
-  height: 80px;
+  padding: 40px;
   background-color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.lightPink};
+  text-align: center;
 `
 
-const Footer = () => <Container>im in the footer!</Container>
+const Footer = () => (
+  <Container>&copy; {new Date().getFullYear()} Cain Watson</Container>
+)
 
 export default Footer
