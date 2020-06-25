@@ -1,12 +1,12 @@
 import { css } from '@emotion/core'
 
-const globalStyles = css`
+const globalStyles = theme => css`
   body {
     margin: 0;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 18px;
-    color: ${props => props.theme.colors.primary};
-    background-color: ${props => props.theme.colors.lightPink};
+    color: ${theme.colors.primary};
+    background-color: ${theme.colors.lightPink};
   }
 
   h1,
