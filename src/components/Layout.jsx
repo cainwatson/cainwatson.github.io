@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
   <Theme>
     <Helmet>
       <link
-        href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Poppins:wght@600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Noto+Sans+SC:wght@400&family=Poppins:wght@600&display=swap"
         rel="stylesheet"
       />
     </Helmet>

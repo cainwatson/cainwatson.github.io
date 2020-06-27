@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
+import TranslatedText from '@components/TranslatedText'
+
 const Container = styled.section`
   max-width: 450px;
   height: min-content;
@@ -15,12 +17,17 @@ const HomeCard = () => (
   <Container>
     <h1>Hi, I'm Cain</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore.
+      I'm a passionate, empathetic software engineer who loves diving into
+      problems head first and navigating to solutions. I also enjoy exploring
+      new technology, especially open source.
     </p>
     <p>
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-      aliquip.
+      Some of my favorite hobbies include learning new languages and reading
+      science fiction.
+      <TranslatedText title="I'm currently learning Chinese and reading Octavia Butler's Parable of the Sower.">
+        <span>我正在学习中文和读</span>Octavia Butler<span>的</span>Parable of
+        the Sower<span>。</span>
+      </TranslatedText>
     </p>
   </Container>
 )
