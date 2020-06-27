@@ -23,7 +23,7 @@ const HomeCard = () => (
     </p>
     <p>
       Some of my favorite hobbies include learning new languages and reading
-      science fiction.
+      science fiction.&nbsp;
       <TranslatedText title="I'm currently learning Chinese and reading Octavia Butler's Parable of the Sower.">
         <span>我正在学习中文和读</span>Octavia Butler<span>的</span>Parable of
         the Sower<span>。</span>
