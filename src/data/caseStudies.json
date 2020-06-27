@@ -3,7 +3,7 @@
     "name": "Draw It!",
     "description": "Draw It! is a web based online game where you try to guess what your friends are drawing.\nEach round a random player gets a word to draw while the rest must enter their guesses into the chat. Making a correct guess gives the player a point and the player with the most points by the end of the game is crowned the winner.",
     "linkSourceCode": "https://github.com/JustDrawIt/drawit",
-    "linkLive": "https://cainwatson.com/drawit",
+    "linkLive": "https://cw-drawit.herokuapp.com/",
     "images": [
       {
         "src": "https://justdrawit.github.io/drawit/docs/images/splash.png",
