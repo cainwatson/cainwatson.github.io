@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-const Text = styled.div`
+const Text = styled.span`
   > span {
     font-family: 'Noto Sans SC', sans-serif;
   }
