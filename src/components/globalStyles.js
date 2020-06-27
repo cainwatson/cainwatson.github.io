@@ -9,6 +9,11 @@ const globalStyles = theme => css`
     background-color: ${theme.colors.lightPink};
   }
 
+  main {
+    position: relative;
+    overflow-x: hidden;
+  }
+
   h1,
   h2,
   h3,
