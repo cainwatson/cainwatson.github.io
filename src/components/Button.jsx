@@ -7,7 +7,7 @@ const buttonStyles = props => css`
   padding: 8px 16px;
   color: ${props.theme.colors.lightPink};
   background-color: ${props.theme.colors[props.variant]};
-  font-size: 20px;
+  font-size: 1.1rem;
   border-radius: 6px;
 
   :hover {

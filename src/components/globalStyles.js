@@ -1,10 +1,13 @@
 import { css } from '@emotion/core'
 
 const globalStyles = theme => css`
+  html {
+    font-size: 18px;
+  }
+
   body {
     margin: 0;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 18px;
     color: ${theme.colors.primary};
     background-color: ${theme.colors.lightPink};
   }
@@ -25,12 +28,12 @@ const globalStyles = theme => css`
   }
 
   h1 {
-    font-size: 2.13rem;
+    font-size: 1.89rem;
     margin: 14px 0;
   }
 
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.56rem;
     margin: 10px 0;
   }
 `
