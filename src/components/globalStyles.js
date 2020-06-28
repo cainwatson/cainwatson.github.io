@@ -1,6 +1,12 @@
 import { css } from '@emotion/core'
 
 const globalStyles = theme => css`
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   html {
     font-size: 18px;
   }

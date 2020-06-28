@@ -6,7 +6,7 @@ import { LinkButton } from '@components/Button'
 import { useWindowSize } from '@hooks/useWindowSize'
 
 const Container = styled.article`
-  max-width: 1200px;
+  max-width: 1232px;
   padding: 28px;
   border: 8px solid ${props => props.theme.colors.primary};
   border-radius: 16px;

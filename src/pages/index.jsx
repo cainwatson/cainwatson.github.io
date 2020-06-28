@@ -8,6 +8,7 @@ import CaseStudyList from '@components/home/CaseStudyList'
 import caseStudies from '../data/caseStudies.json'
 
 const Content = styled.div`
+  margin-top: 40px;
   padding: 20px;
   display: block;
 
@@ -20,7 +21,7 @@ const Content = styled.div`
 `
 
 const CaseStudyHeader = styled.h1`
-  max-width: 1200px;
+  max-width: 1232px;
   padding: 14px;
   margin: 30px 0;
   border: 4px solid ${props => props.theme.colors.primary};

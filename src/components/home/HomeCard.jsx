@@ -5,13 +5,17 @@ import TranslatedText from '@components/TranslatedText'
 import SocialLinks from './SocialLinks'
 
 const Container = styled.section`
-  max-width: 450px;
+  max-width: 530px;
   height: min-content;
-  padding: 36px;
+  padding: 28px;
   border: 4px solid ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.lightPink};
   text-align: center;
   border-radius: 16px;
+
+  @media (min-width: 1024px) {
+    padding: 36px;
+  }
 `
 
 const HomeCard = () => (
