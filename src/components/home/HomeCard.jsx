@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 import TranslatedText from '@components/TranslatedText'
+import SocialLinks from './SocialLinks'
 
 const Container = styled.section`
   max-width: 450px;
@@ -29,6 +30,7 @@ const HomeCard = () => (
         the Sower<span>。</span>
       </TranslatedText>
     </p>
+    <SocialLinks />
   </Container>
 )
 
