@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.23.10"/><title data-react-helmet="true">Creating a Vanilla HTTP Server in Node.js | Cain Watson</title><link data-react-helmet="true" href="https://fonts.googleapis.com/css2?family=Lexend+Deca&amp;family=Noto+Sans+SC:wght@400&amp;family=Poppins:wght@600&amp;display=swap" rel="stylesheet"/><link data-react-helmet="true" href="https://fonts.googleapis.com/css2?family=Fira+Code&amp;display=swap" rel="stylesheet"/><meta data-react-helmet="true" name="description" content="Portfolio of Cain Watson"/><meta data-react-helmet="true" property="og:title" content="Creating a Vanilla HTTP Server in Node.js"/><meta data-react-helmet="true" property="og:description" content="Portfolio of Cain Watson"/><meta data-react-helmet="true" property="og:type" content="website"/><link rel="icon" href="/favicon-32x32.png?v=b88989dcdd1db3243030f4094e4a7075"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#011627"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b88989dcdd1db3243030f4094e4a7075"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b88989dcdd1db3243030f4094e4a7075"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b88989dcdd1db3243030f4094e4a7075"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b88989dcdd1db3243030f4094e4a7075"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b88989dcdd1db3243030f4094e4a7075"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b88989dcdd1db3243030f4094e4a7075"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b88989dcdd1db3243030f4094e4a7075"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b88989dcdd1db3243030f4094e4a7075"/><link as="script" rel="preload" href="/webpack-runtime-518250824778a4933c8f.js"/><link as="script" rel="preload" href="/framework-d9cf0f47b747b267fae2.js"/><link as="script" rel="preload" href="/app-d0ae4144e27d7675c9b7.js"/><link as="script" rel="preload" href="/commons-0fa1228d6ee429160760.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-jsx-f2a6b3234211f8a6f485.js"/><link as="fetch" rel="preload" href="/page-data/blog/creating-a-vanilla-http-server-in-node-js/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="53k4n4">html{font-size:18px;}body{margin:0;font-family:'Lexend Deca',sans-serif;color:#011627;background-color:#FCEFF9;}main{position:relative;overflow-x:hidden;}h1,h2,h3,h4,h5,h6,button{font-family:'Poppins',sans-serif;}h1{font-size:1.89rem;margin:14px 0;}h2{font-size:1.56rem;margin:10px 0;}</style><main><style data-emotion-css="1b89zcc">.css-1b89zcc{margin:0 10vw;padding:20px;}.css-1b89zcc code{font-family:'Fira Code',monospace;}</style><section class="css-1b89zcc e11quqml0"><h1>Creating a Vanilla HTTP Server in Node.js</h1><style data-emotion-css="wd8pcb">.css-wd8pcb{margin:-4px;padding:0;list-style-type:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}</style><ul class="css-wd8pcb e11quqml1"><style data-emotion-css="19nzs7d">.css-19nzs7d{margin:4px;padding:6px 8px;color:#FCEFF9;background-color:#011627;border-radius:6px;}</style><li class="css-19nzs7d e11quqml2">node</li><li class="css-19nzs7d e11quqml2">http</li></ul><style data-emotion-css="2pkx6b">.css-2pkx6b{margin:14px 0;display:block;}</style><span class="css-2pkx6b e11quqml3"><time dateTime="2017-06-18T00:00:00.000Z" title="June 18, 2017">June 18, 2017</time>, Updated <time dateTime="2020-05-25T00:00:00.000Z" title="May 25, 2020">May 25, 2020</time></span><div><p>There are so many tutorials out there using Express, but what does Express use? In this post, we're going to use the native HTTP module to create a vanilla Node server and get a better understanding of Node and HTTP.</p>
+<h2>Getting started</h2>
+<p>First, make sure you have Node installed and then create a <code>server.js</code> file. Inside the file let's require the HTTP module:</p>
+<pre><code class="language-js">const http = require('http')
+</code></pre>
+<p>We don't need to <code>npm install</code> this because the HTTP module comes along with Node.</p>
+<p>Now let's create our server and have it listen on port <code>8080</code>.</p>
+<pre><code class="language-js">...
+const PORT = 8080;
+const server = http.createServer((request, response) => {
+  console.log('Request made to server!');
+});
+
+server.listen(PORT, () => {
+  console.log(`Server listening on port :${PORT} 🚀`);
+});
+</code></pre>
+<ul>
+<li>The <code>.createServer</code> method takes in a callback that will be invoked when <em>any</em> request is made to our server once it's started. The callback takes in two parameters that we'll utilize soon.</li>
+<li>The <code>.listen</code> method takes in the port our server will run on and a callback. It will start the server and then invoke the callback.</li>
+</ul>
+<p>Now let's run this with the following command in the terminal:</p>
+<pre><code class="language-sh">$ node server.js
+Server listening on port :8080 🚀
+</code></pre>
+<h2>Making requests to our server</h2>
+<p>Awesome! We've created our server and if we try to make any requests to it we should see the log run.</p>
+<p>Here I opened up another terminal and used a command-line tool called cURL to send requests to our server. You could also use a more friendly tool such as Postman or even your browser if you wanted to.</p>
+<pre><code class="language-sh">curl -i localhost:8080/
+</code></pre>
+<p>Notice I added this 'localhost' before the port. This is because you need to say what the host of the server is when you make a request to it and localhost automatically points to your own machine. You could also use <code>127.0.0.1:8080</code> as well, but that's a little bit harder to remember.</p>
+<p>Now, if we check back to the other terminal running the server we see:</p>
+<pre><code class="language-sh">$ node server.js
+Server listening on port :8080 🚀
+Request made to server!
+</code></pre>
+<p>Great. Now, there's actually a small problem we need to fix. When we make a request to our server, it definitely comes through, but currently, our server doesn't respond. Leaving our client (like cURL/Postman/Browser) waiting and waiting until they give up.</p>
+<h2>Responding</h2>
+<p>This is where the <code>response</code> parameter to <code>.createServer</code> comes into play. As the variable name hints at, <code>response</code> will be an object that we can use for dealing with the response of any HTTP request sent to our server.</p>
+<p>Two important methods of response are <code>.writeHead</code> and <code>.end</code>.</p>
+<pre><code class="language-js">...
+const server = http.createServer((request, response) => {
+  console.log('Request made to server!');
+
+  const headers = {
+    'Content-Type': 'text/plain'
+  };
+  let statusCode = 200;
+  let body = 'Hello, world!';
+
+  response.writeHead(statusCode, headers);
+  response.end(body);
+});
+...
+</code></pre>
+<ul>
+<li>The <code>.writeHead</code> method takes in the status code and optional headers you want to be sent back to the client. Note: It only prepares the response and doesn't actually respond.</li>
+<li>The <code>.end</code> method optionally takes in a string to be sent as the body of the response and then sends off the request.</li>
+</ul>
+<p>Now, we need to restart our server so it is running our new code. Press Ctrl-C in your terminal running the server and then re-run the <code>node server.js</code> command to boot the server up again.</p>
+<p>If we try to make a request to our server now, we'll see we get a response:</p>
+<pre><code class="language-sh">$ curl -i localhost:8080/
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Date: Fri, 26 Jun 2020 00:51:26 GMT
+Connection: keep-alive
+Transfer-Encoding: chunked
+
+Hello, world!%
+</code></pre>
+<h2>Routing</h2>
+<p>This is great, but most of the time we want to perform different actions based on the request method and endpoint. This is where the <code>request</code> object comes in, giving us <code>request.url</code> and <code>request.method</code>:</p>
+<pre><code class="language-js">...
+const server = http.createServer((request, response) => {
+  console.log('Request made to server!');
+
+  const headers = {
+    'Content-Type': 'text/plain'
+  };
+  let statusCode = 404;
+  let body = 'Not Found';
+
+  if (request.url === '/') {
+    if (request.method === 'GET') {
+      statusCode = 200;
+      body = 'Hello, world!';
+    }
+  } else if (request.url === '/bananas') {
+    if (request.method === 'GET') {
+      statusCode = 200;
+      body = '🍌🍌🍌';
+    } else if (request.method === 'POST') {
+      // Save new banana
+      statusCode = 201;
+      body = 'Banana saved!';
+    } else {
+      // ...others such as PUT, PATCH, DELETE
+    }
+  }
+
+  response.writeHead(statusCode, headers);
+  response.end(body);
+});
+...
+</code></pre>
+<p>We used some <code>if</code>s to change what our server does and responds with based on the endpoint and method. Btw, don't forget to restart your server after changing the code!</p>
+<h2>Wrapping up</h2>
+<p>We've now built a server using Node without any framework. Woo!</p>
+<p>Now while frameworks definitely make building servers much easier, it can be fun to look under the hood sometimes.</p></div></section></main><style data-emotion-css="6zvniq">.css-6zvniq{padding:40px;background-color:#011627;color:#FCEFF9;text-align:center;}</style><footer class="css-6zvniq ecvq5430">© <!-- -->2020<!-- --> Cain Watson</footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/creating-a-vanilla-http-server-in-node-js/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-d0ae4144e27d7675c9b7.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-0f6cb0389d147798e6c2.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-0cb4812c07d7b0f99592.js"],"component---src-templates-blog-post-jsx":["/component---src-templates-blog-post-jsx-f2a6b3234211f8a6f485.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-jsx-f2a6b3234211f8a6f485.js" async=""></script><script src="/commons-0fa1228d6ee429160760.js" async=""></script><script src="/app-d0ae4144e27d7675c9b7.js" async=""></script><script src="/framework-d9cf0f47b747b267fae2.js" async=""></script><script src="/webpack-runtime-518250824778a4933c8f.js" async=""></script></body></html>
