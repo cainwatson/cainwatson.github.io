@@ -60,7 +60,11 @@ const CaseStudy = ({ caseStudy }) => {
         ))}
         <Buttons>
           {caseStudy.linkSourceCode && (
-            <LinkButton href={caseStudy.linkSourceCode} target="_blank">
+            <LinkButton
+              href={caseStudy.linkSourceCode}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Source Code
             </LinkButton>
           )}
@@ -68,6 +72,7 @@ const CaseStudy = ({ caseStudy }) => {
             <LinkButton
               href={caseStudy.linkLive}
               target="_blank"
+              rel="noopener noreferrer"
               variant="secondary"
             >
               Visit
