@@ -3,7 +3,7 @@ slug: '/creating-a-vanilla-http-server-in-node-js'
 title: 'Creating a Vanilla HTTP Server in Node.js'
 tags: ['node', 'http']
 date_published: 2017-06-18
-date_updated: 2020-05-25
+date_updated: 2020-05-30
 ---
 
 There are so many tutorials out there using Express, but what does Express use? In this post, we're going to use the native HTTP module to create a vanilla Node server and get a better understanding of Node and HTTP.
@@ -77,7 +77,7 @@ const server = http.createServer((request, response) => {
   console.log('Request made to server!');
 
   const headers = {
-    'Content-Type': 'text/plain'
+    'Content-Type': 'text/plain',
   };
   let statusCode = 200;
   let body = 'Hello, world!';
@@ -116,7 +116,7 @@ const server = http.createServer((request, response) => {
   console.log('Request made to server!');
 
   const headers = {
-    'Content-Type': 'text/plain'
+    'Content-Type': 'text/plain',
   };
   let statusCode = 404;
   let body = 'Not Found';
