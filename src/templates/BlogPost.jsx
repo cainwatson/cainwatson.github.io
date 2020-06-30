@@ -13,7 +13,7 @@ const Container = styled.section`
   padding: 20px;
 
   code {
-    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Mono', monospace;
   }
 `
 
@@ -53,7 +53,7 @@ export default function Template({ data }) {
     <Layout>
       <Helmet>
         <link
-          href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
           rel="stylesheet"
         />
       </Helmet>
