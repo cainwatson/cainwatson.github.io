@@ -6,6 +6,8 @@ import styled from '@emotion/styled'
 import Layout from '@components/Layout'
 import SEO from '@components/SEO'
 
+import './night-owl-theme.css'
+
 const Container = styled.section`
   margin: 0 10vw;
   padding: 20px;

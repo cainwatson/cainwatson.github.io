@@ -1,0 +1,119 @@
+/**
+ * Prism theme for Sarah Drasner's Night Owl Theme
+ * https://github.com/sdras/night-owl-vscode-theme/blob/master/themes/Night%20Owl-color-theme.json
+ */
+
+:root {
+  --background-color: #011627;
+  --foreground-color: #d6deeb;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: var(--foreground-color);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  tab-size: 2;
+  hyphens: none;
+}
+
+pre > code[class*='language-'] {
+  font-size: 1em;
+}
+
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection,
+code[class*='language-'] span ::selection {
+  background: #1d3b53;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background-color: var(--background-color);
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  padding: 0.2em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: var(--background-color);
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #637777;
+  font-style: italic;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.string,
+.token.attr-value {
+  color: #ecc48d;
+}
+
+.token.punctuation,
+.token.operator {
+  color: #d9f5dd; /* no highlight */
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.property,
+.token.regex,
+.token.inserted {
+  color: #addb67;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-name,
+.language-autohotkey .token.selector {
+  color: #c792ea;
+}
+
+.token.function,
+.token.deleted,
+.language-autohotkey .token.tag {
+  color: #82aaff;
+}
+
+.token.tag,
+.token.selector,
+.language-autohotkey .token.keyword {
+  color: #addb67;
+}
+
+.token.important,
+.token.function,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
