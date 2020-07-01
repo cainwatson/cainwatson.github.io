@@ -14,6 +14,7 @@ const Container = styled.section`
   background-color: ${props => props.theme.colors.lightPink};
   text-align: center;
   border-radius: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   @media (min-width: 1024px) {
     padding: 36px;
