@@ -3,7 +3,7 @@ slug: '/creating-a-vanilla-http-server-in-node-js'
 title: 'Creating a Vanilla HTTP Server in Node.js'
 tags: ['node', 'http']
 date_published: 2017-06-18
-date_updated: 2020-05-30
+date_updated: 2020-06-01
 ---
 
 There are so many tutorials out there using Express, but what does Express use? In this post, we're going to use the native HTTP module to create a vanilla Node server and get a better understanding of Node and HTTP.
@@ -149,6 +149,6 @@ We used some `if`s to change what our server does and responds with based on the
 
 ## Wrapping up
 
-We've now built a server using Node without any framework. Woo!
+We've now built a server using Node without any framework. Woo! If you'd like to play with the code, here's the [source code](https://github.com/cainwatson/vanilla-node-http-server).
 
 Now while frameworks definitely make building servers much easier, it can be fun to look under the hood sometimes.
