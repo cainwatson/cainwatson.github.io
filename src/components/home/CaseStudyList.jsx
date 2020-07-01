@@ -10,6 +10,14 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  > li {
+    margin-bottom: 28px;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
 `
 
 const CaseStudyList = ({ caseStudies }) => (
