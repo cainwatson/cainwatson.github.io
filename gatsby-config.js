@@ -70,6 +70,36 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Lexend Deca',
+              fontDisplay: 'swap',
+              strategy: 'cdn',
+            },
+            {
+              family: 'Poppins',
+              variants: ['600'],
+              fontDisplay: 'swap',
+              strategy: 'cdn',
+            },
+            {
+              family: 'Noto Sans SC',
+              variants: ['400'],
+              fontDisplay: 'swap',
+              strategy: 'cdn',
+              text: '我正在学习中文和读的。',
+            },
+          ],
+        },
+        useMinify: true,
+        usePreload: true,
+        usePreconnect: true,
+      },
+    },
     `gatsby-plugin-preact`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
