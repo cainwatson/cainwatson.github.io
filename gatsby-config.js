@@ -38,7 +38,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
           include: /images/,
@@ -60,7 +60,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: 'language-',
+              classPrefix: `language-`,
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: true,
@@ -76,24 +76,24 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: 'Lexend Deca',
-              subsets: ['latin'],
-              fontDisplay: 'swap',
-              strategy: 'cdn',
+              family: `Lexend Deca`,
+              subsets: [`latin`],
+              fontDisplay: `swap`,
+              strategy: `cdn`,
             },
             {
-              family: 'Poppins',
-              variants: ['600'],
-              subsets: ['latin'],
-              fontDisplay: 'swap',
-              strategy: 'cdn',
+              family: `Poppins`,
+              variants: [`600`],
+              subsets: [`latin`],
+              fontDisplay: `swap`,
+              strategy: `cdn`,
             },
             {
-              family: 'Noto Sans SC',
-              variants: ['400'],
-              fontDisplay: 'swap',
-              strategy: 'cdn',
-              text: '我正在学习中文和读的。',
+              family: `Noto Sans SC`,
+              variants: [`400`],
+              fontDisplay: `swap`,
+              strategy: `cdn`,
+              text: `我正在学习中文和读的。`,
             },
           ],
         },
