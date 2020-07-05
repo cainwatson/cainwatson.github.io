@@ -42,7 +42,10 @@ const HomeCard = () => {
 
   return (
     <Container>
-      <Headshot fixed={data.file.childImageSharp.fixed} />
+      <Headshot
+        fixed={data.file.childImageSharp.fixed}
+        alt="Headshot of Cain wearing a grey suit and floral bow tie."
+      />
       <h1>Hi, I'm Cain</h1>
       <p>
         I'm a passionate, empathetic software engineer who loves diving into
