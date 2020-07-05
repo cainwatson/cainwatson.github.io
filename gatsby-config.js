@@ -77,12 +77,14 @@ module.exports = {
           google: [
             {
               family: 'Lexend Deca',
+              subsets: ['latin'],
               fontDisplay: 'swap',
               strategy: 'cdn',
             },
             {
               family: 'Poppins',
               variants: ['600'],
+              subsets: ['latin'],
               fontDisplay: 'swap',
               strategy: 'cdn',
             },
