@@ -33,7 +33,7 @@ const HomeCard = () => {
       file(relativePath: { eq: "headshot.png" }) {
         childImageSharp {
           fixed(width: 240, height: 240) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
