@@ -9,11 +9,15 @@ import SEO from '@components/SEO'
 import './night-owl-theme.css'
 
 const Container = styled.section`
-  margin: 0 10vw;
+  margin: 0 auto;
   padding: 20px;
 
   code {
     font-family: 'Fira Mono', monospace;
+  }
+
+  @media (min-width: 1024px) {
+    width: 50%;
   }
 `
 
