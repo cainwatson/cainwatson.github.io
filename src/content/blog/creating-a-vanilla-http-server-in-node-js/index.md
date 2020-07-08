@@ -50,7 +50,7 @@ Awesome! We've created our server and if we try to make any requests to it we sh
 Here I opened up another terminal and used a command-line tool called cURL to send requests to our server. You could also use a more friendly tool such as Postman or even your browser if you wanted to.
 
 ```sh
-curl -i localhost:8080/
+$ curl -i localhost:8080/
 ```
 
 Notice I added this 'localhost' before the port. This is because you need to say what the host of the server is when you make a request to it and localhost automatically points to your own machine. You could also use `127.0.0.1:8080` as well, but that's a little bit harder to remember.

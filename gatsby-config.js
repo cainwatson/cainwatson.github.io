@@ -62,7 +62,9 @@ module.exports = {
             options: {
               classPrefix: `language-`,
               inlineCodeMarker: null,
-              aliases: {},
+              aliases: {
+                sh: `shell`,
+              },
               showLineNumbers: true,
               noInlineHighlight: false,
             },
