@@ -7,7 +7,7 @@ import Layout from '@components/Layout'
 import SEO from '@components/SEO'
 import Header from './blogPost/BlogPostHeader'
 
-import './night-owl-theme.css'
+import './blogPost/night-owl-theme.css'
 
 const Container = styled.section`
   margin: 0 auto;
