@@ -105,6 +105,11 @@ module.exports = {
               strategy: `cdn`,
               text: `我正在学习中文和读的。`,
             },
+            {
+              family: `Fira Mono`,
+              fontDisplay: `swap`,
+              strategy: `cdn`,
+            },
           ],
         },
         useMinify: true,

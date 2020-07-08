@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
@@ -28,12 +27,6 @@ export default function Template({ data }) {
 
   return (
     <Layout>
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
       <SEO title={title} />
       <Container>
         <Header post={post} />
