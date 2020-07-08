@@ -99,16 +99,17 @@ module.exports = {
               strategy: `cdn`,
             },
             {
+              family: `Fira Mono`,
+              subsets: [`latin`],
+              fontDisplay: `swap`,
+              strategy: `cdn`,
+            },
+            {
               family: `Noto Sans SC`,
               variants: [`400`],
               fontDisplay: `swap`,
               strategy: `cdn`,
               text: `我正在学习中文和读的。`,
-            },
-            {
-              family: `Fira Mono`,
-              fontDisplay: `swap`,
-              strategy: `cdn`,
             },
           ],
         },
