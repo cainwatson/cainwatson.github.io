@@ -117,3 +117,8 @@ pre[class*='language-'] {
 .token.italic {
   font-style: italic;
 }
+
+.language-shell .token.function {
+  color: var(--foreground-color);
+  font-weight: normal;
+}
