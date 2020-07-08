@@ -42,6 +42,10 @@ const globalStyles = theme => css`
     font-size: 1.56rem;
     margin: 10px 0;
   }
+
+  a {
+    color: ${theme.colors.primary};
+  }
 `
 
 export default globalStyles
