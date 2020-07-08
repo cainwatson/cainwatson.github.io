@@ -32,7 +32,7 @@ const HomeCard = () => {
     query {
       file(relativePath: { eq: "headshot.png" }) {
         childImageSharp {
-          fixed(width: 240, height: 240) {
+          fixed(width: 240, height: 240, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
