@@ -56,6 +56,11 @@ export const posteQuery = graphql`
         date_published_formatted: date_published(formatString: "MMMM DD, YYYY")
         date_updated_formatted: date_updated(formatString: "MMMM DD, YYYY")
       }
+      fields {
+        readingTime {
+          text
+        }
+      }
     }
   }
 `

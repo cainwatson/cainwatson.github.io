@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
-const Container = styled.section`
+const Container = styled.header`
   margin-bottom: 24px;
 `
 
@@ -22,9 +22,8 @@ const Tag = styled.li`
   border-radius: 6px;
 `
 
-const Dates = styled.span`
+const SubHeader = styled.div`
   margin: 14px 0;
-  display: block;
 `
 
 const BlogPostHeader = ({ post }) => {
@@ -36,6 +35,7 @@ const BlogPostHeader = ({ post }) => {
     date_published_formatted,
     date_updated_formatted,
   } = post.frontmatter
+  const { readingTime } = post.fields
 
   return (
     <Container>
@@ -45,7 +45,7 @@ const BlogPostHeader = ({ post }) => {
           <Tag key={tag}>{tag}</Tag>
         ))}
       </Tags>
-      <Dates>
+      <SubHeader>
         <time dateTime={date_published} title={date_published_formatted}>
           {date_published_formatted}
         </time>
@@ -57,7 +57,8 @@ const BlogPostHeader = ({ post }) => {
             </time>
           </>
         )}
-      </Dates>
+        <span>&nbsp;&middot; {readingTime.text}</span>
+      </SubHeader>
     </Container>
   )
 }
@@ -71,6 +72,11 @@ BlogPostHeader.propTypes = {
       date_updated: PropTypes.string.isRequired,
       date_published_formatted: PropTypes.string.isRequired,
       date_updated_formatted: PropTypes.string.isRequired,
+    }).isRequired,
+    fields: PropTypes.shape({
+      readingTime: PropTypes.shape({
+        text: PropTypes.string.isRequired,
+      }).isRequired,
     }).isRequired,
   }).isRequired,
 }
