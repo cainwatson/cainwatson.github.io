@@ -58,15 +58,10 @@ module.exports = {
         plugins: [
           `gatsby-remark-autolink-headers`,
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: `gatsby-remark-vscode`,
             options: {
-              classPrefix: `language-`,
-              inlineCodeMarker: null,
-              aliases: {
-                sh: `shell`,
-              },
-              showLineNumbers: true,
-              noInlineHighlight: false,
+              theme: `Night Owl`,
+              extensions: [`night-owl`],
             },
           },
           {
