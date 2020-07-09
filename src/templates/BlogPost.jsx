@@ -7,12 +7,24 @@ import SEO from '@components/SEO'
 import Header from './blogPost/BlogPostHeader'
 
 const Container = styled.section`
+  --grvsc-padding-h: 0.9rem;
+  --grvsc-padding-v: 0.9rem;
+
   margin: 0 auto;
   padding: 20px;
 
   code {
     font-family: 'Fira Mono', monospace;
     font-size: 0.9rem;
+  }
+
+  /* Inline code blocks */
+  *:not(pre) > code {
+    padding: 2px 0.2em;
+    color: #d6deeb;
+    background-color: ${props => props.theme.colors.primary};
+    border: 1px solid ${props => props.theme.colors.primary};
+    border-radius: 6px;
   }
 
   @media (min-width: 1024px) {
