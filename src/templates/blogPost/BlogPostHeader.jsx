@@ -69,9 +69,9 @@ BlogPostHeader.propTypes = {
       title: PropTypes.string.isRequired,
       tags: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
       date_published: PropTypes.string.isRequired,
-      date_updated: PropTypes.string.isRequired,
+      date_updated: PropTypes.string,
       date_published_formatted: PropTypes.string.isRequired,
-      date_updated_formatted: PropTypes.string.isRequired,
+      date_updated_formatted: PropTypes.string,
     }).isRequired,
     fields: PropTypes.shape({
       readingTime: PropTypes.shape({
