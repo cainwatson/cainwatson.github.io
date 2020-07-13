@@ -13,7 +13,7 @@ There are so many tutorials out there using Express, but what does Express use? 
 First, make sure you have Node installed and then create a `server.js` file. Inside the file let's require the HTTP module:
 
 ```js
-const http = require('http')
+const http = require('http');
 ```
 
 We don't need to `npm install` this because the HTTP module comes along with Node.
