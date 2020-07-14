@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "esnext",
+    "target": "es6",
     "jsx": "react",
     "lib": ["dom", "esnext"],
     "strict": false,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "resolveJsonModule": true,
     "noEmit": true,
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -13,6 +18,8 @@
     "noUnusedParameters": false,
     "removeComments": false,
     "preserveConstEnums": true,
+    "checkJs": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "@components/*": ["./src/components/*"],
