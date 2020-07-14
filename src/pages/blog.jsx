@@ -4,8 +4,7 @@ import styled from '@emotion/styled'
 
 import SEO from '@components/SEO'
 import Layout from '@components/Layout'
-
-import BlogPostPreviewList from './blog/BlogPostPreviewList'
+import BlogPostPreviewList from '@components/blog/BlogPostPreviewList'
 
 const Content = styled.div`
   margin: 0 auto;

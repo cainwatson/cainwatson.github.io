@@ -3,8 +3,8 @@ import styled from '@emotion/styled'
 
 import SEO from '@components/SEO'
 import Layout from '@components/Layout'
-import HomeHero from './index/HomeHero'
-import CaseStudies from './index/CaseStudies'
+import HomeHero from '@components/index/HomeHero'
+import CaseStudies from '@components/index/CaseStudies'
 
 const Content = styled.div`
   margin-top: 40px;
