@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 import SEO from '@components/SEO'
 import Layout from '@components/Layout'
-import HomeHero from '@components/home/HomeHero'
+import HomeHero from './index/HomeHero'
 import CaseStudies from './index/CaseStudies'
 
 const Content = styled.div`

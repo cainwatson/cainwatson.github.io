@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import styled from '@emotion/styled'
 
 import TranslatedText from '@components/TranslatedText'
-import SocialLinks from './SocialLinks'
+import SocialLinks from '@components/SocialLinks'
 
 const Container = styled.section`
   max-width: 530px;

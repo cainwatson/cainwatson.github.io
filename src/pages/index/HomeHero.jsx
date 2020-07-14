@@ -1,8 +1,8 @@
 import React from 'react'
-import HomeCard from './HomeCard'
 import styled from '@emotion/styled'
 
-import BackgroundImage from '../../images/home-hero-background.svg'
+import BackgroundImage from '@images/home-hero-background.svg'
+import HomeCard from './homeHero/HomeHeroCard'
 
 const Background = styled(BackgroundImage)`
   position: absolute;
@@ -29,7 +29,5 @@ const HomeHero = () => (
     </ContentContainer>
   </>
 )
-
-HomeHero.propTypes = {}
 
 export default HomeHero
