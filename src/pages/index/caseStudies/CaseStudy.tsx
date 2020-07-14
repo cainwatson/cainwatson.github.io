@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { FC } from 'react'
 import styled from '@emotion/styled'
 
 import { LinkButton } from '@components/Button'
@@ -48,7 +47,11 @@ const Buttons = styled.div`
   }
 `
 
-const CaseStudy = ({ caseStudy }) => {
+interface Props {
+  caseStudy: CaseStudy
+}
+
+const CaseStudy: FC<Props> = ({ caseStudy }) => {
   const { width } = useWindowSize()
 
   return (
@@ -90,23 +93,6 @@ const CaseStudy = ({ caseStudy }) => {
       )}
     </Container>
   )
-}
-
-export const caseStudyPropType = PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  linkSourceCode: PropTypes.string,
-  linkLive: PropTypes.string,
-  images: PropTypes.arrayOf(
-    PropTypes.shape({
-      src: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    })
-  ),
-})
-
-CaseStudy.propTypes = {
-  caseStudy: caseStudyPropType,
 }
 
 export default CaseStudy
