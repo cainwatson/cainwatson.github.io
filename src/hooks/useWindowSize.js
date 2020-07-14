@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 const isClient = typeof window === 'object'
 const getSize = () => ({
   width: isClient ? window.innerWidth : undefined,
-  height: isClient ? window.innerHeightinnerWidth : undefined,
+  height: isClient ? window.innerHeight : undefined,
 })
 
 export const useWindowSize = () => {
@@ -11,7 +11,7 @@ export const useWindowSize = () => {
 
   useEffect(() => {
     if (!isClient) {
-      return false
+      return undefined
     }
 
     const handleResize = () => {
