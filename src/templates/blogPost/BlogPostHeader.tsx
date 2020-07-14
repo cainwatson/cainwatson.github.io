@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { FC } from 'react'
 import styled from '@emotion/styled'
 
 const Container = styled.header`
@@ -26,7 +25,11 @@ const SubHeader = styled.div`
   margin: 14px 0;
 `
 
-const BlogPostHeader = ({ post }) => {
+interface Props {
+  post: Post
+}
+
+const BlogPostHeader: FC<Props> = ({ post }) => {
   const {
     title,
     tags,
@@ -61,24 +64,6 @@ const BlogPostHeader = ({ post }) => {
       </SubHeader>
     </Container>
   )
-}
-
-BlogPostHeader.propTypes = {
-  post: PropTypes.shape({
-    frontmatter: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      tags: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-      date_published: PropTypes.string.isRequired,
-      date_updated: PropTypes.string,
-      date_published_formatted: PropTypes.string.isRequired,
-      date_updated_formatted: PropTypes.string,
-    }).isRequired,
-    fields: PropTypes.shape({
-      readingTime: PropTypes.shape({
-        text: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
 }
 
 export default BlogPostHeader

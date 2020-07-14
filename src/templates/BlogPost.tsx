@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
@@ -32,8 +32,14 @@ const Container = styled.section`
   }
 `
 
-export default function Template({ data }) {
-  const { markdownRemark: post } = data
+interface Props {
+  data: {
+    post: Post
+  }
+}
+
+const BlogPostTemplate: FC<Props> = ({ data }) => {
+  const { post } = data
   const { title } = post.frontmatter
 
   return (
@@ -47,9 +53,11 @@ export default function Template({ data }) {
   )
 }
 
+export default BlogPostTemplate
+
 export const postQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    post: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
         slug
