@@ -47,7 +47,7 @@ export default function Template({ data }) {
   )
 }
 
-export const posteQuery = graphql`
+export const postQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
