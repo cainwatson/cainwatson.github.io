@@ -36,6 +36,14 @@ const CatImage = styled(Img)`
   border-radius: 8px;
 `
 
+const Links = styled.div`
+  margin: -4px;
+
+  > a {
+    margin: 4px;
+  }
+`
+
 const NotFoundPage = ({ data }) => (
   <Layout>
     <SEO title="404" />
@@ -47,9 +55,10 @@ const NotFoundPage = ({ data }) => (
       <div>
         <h1>Uh oh.</h1>
         <p>I couldn't find that page.</p>
-        <p>
+        <Links>
           <Link to="/">Home</Link>
-        </p>
+          <Link to="/blog">Blog</Link>
+        </Links>
       </div>
     </Container>
   </Layout>
