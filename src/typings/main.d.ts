@@ -1,4 +1,5 @@
 interface Post {
+  html: string
   excerpt: string
   frontmatter: {
     slug: string
