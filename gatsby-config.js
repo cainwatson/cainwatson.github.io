@@ -35,6 +35,7 @@ module.exports = {
           '@components': `src/components`,
           '@content': `src/content`,
           '@hooks': `src/hooks`,
+          '@images': `src/images`,
         },
       },
     },
