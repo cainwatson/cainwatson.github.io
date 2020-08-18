@@ -30,7 +30,7 @@ const Headshot = styled(Img)`
 const HomeCard = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "headshot.png" }) {
+      file(relativePath: { eq: "headshot.jpg" }) {
         childImageSharp {
           fixed(width: 240, height: 240, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
