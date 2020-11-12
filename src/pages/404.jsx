@@ -57,7 +57,6 @@ const NotFoundPage = ({ data }) => (
         <p>I couldn't find that page.</p>
         <Links>
           <Link to="/">Home</Link>
-          <Link to="/blog">Blog</Link>
         </Links>
       </div>
     </Container>

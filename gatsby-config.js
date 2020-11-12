@@ -55,29 +55,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-autolink-headers`,
-          {
-            resolve: `gatsby-remark-vscode`,
-            options: {
-              theme: `Night Owl`,
-              extensions: [`night-owl`, `elixir-ls`],
-            },
-          },
-          {
-            resolve: `gatsby-remark-external-links`,
-            options: {
-              target: `_blank`,
-              rel: `noopener noreferrer`,
-            },
-          },
-          `gatsby-remark-reading-time`,
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-webfonts`,
       options: {
         fonts: {
@@ -91,12 +68,6 @@ module.exports = {
             {
               family: `Poppins`,
               variants: [`600`],
-              subsets: [`latin`],
-              fontDisplay: `swap`,
-              strategy: `cdn`,
-            },
-            {
-              family: `Fira Mono`,
               subsets: [`latin`],
               fontDisplay: `swap`,
               strategy: `cdn`,
